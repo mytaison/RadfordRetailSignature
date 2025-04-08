@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+
+        @media screen and (max-width: 600px) {
+            .signature-table {
+                width: 100% !important;
+            }
+            .signature-img {
+                width: 150px !important;
+                height: auto !important;
+            }
+            .cert-img {
+                width: 100px !important;
+                height: auto !important;
+            }
+        }
+        .custom-header{
+            font-weight: bold;
+            color: rgb(44, 40, 40);
+            font-size: 1.4rem;
+        }
+        .custom-input {
+            width: 100%;
+            max-width: 600px;
+            padding: 0.5rem 1rem;
+            border: 1px solid #d1d5db; /* gray-300 */
+            border-radius: 0.5rem;      /* rounded-lg */
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* shadow-sm */
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .custom-input:focus {
+            border-color: #3b82f6;  /* blue-500 */
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* focus ring */
+        }
+
+        .custom-button {
+            padding: 0.5rem 1.5rem;
+            background-color: #2563eb; /* blue-600 */
+            color: white;
+            font-size: 1rem;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border: none;
+            border-radius: 0.5rem;     /* rounded-lg */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* shadow-md */
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .custom-button:hover {
+            background-color: #1d4ed8; /* blue-700 */
+        }
+
+        .user-form{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="font-family:Arial, Helvetica, sans-serif; padding: 1rem;">
+        <h4 class="custom-header" >Your Signature Info</h4>
+        <form class="user-form" id="form1">
+            <label for="name" style="display:inline-block; width:100px;">Name: </label>
+            <input type="text" id="name" class="custom-input" placeholder="Your Name"/>
+            <br>
+            <br>
+            <label for="position" style="display:inline-block; width:100px;">Designation: </label>
+            <input type="text" id="position"  class="custom-input" placeholder="Your Designation"/>
+            <br>
+            <br>
+            <label for="email" style="display:inline-block; width:100px;">Email: </label>
+            <input type="text" id="email" class="custom-input" placeholder="Your Email"/>
+            <br>
+            <br>
+            <label for="phone" style="display:inline-block; width:100px;">Phone: </label>
+            <input type="text" id="phone" class="custom-input" placeholder="Your Phone Number"/>
+            <br>
+            <br>
+            <button class="custom-button" type="button" onclick="copySignatue()">Copy Signature</button>
+        </form>
+    </div>
+ 
+    <br>
+    <br>
+    <br>
+
+
+    
+
+    <table id="signature-table" class="signature-table" style="width:600px; border:none; padding:0; font-family: Helvetica, Arial, sans-serif;">
+        <tr>
+            <td style="padding:10px; width:180px;">
+                <img src="https://radfordretail.com/wp-content/uploads/2025/04/brand_logo.png" alt="Radford" class="signature-img" style="width:150px; height:auto;"/>
+            </td>
+
+            <td style="padding:10px; text-align:left;">
+                <p style="margin:0; font-size:16px; ">
+                    <strong id="sig_name">Adeel Abu Bakr</strong><br>
+                    <span id="sig_position">Head Of Technology | Loss Prevention</span>
+                </p>
+            </td>
+        </tr>
+        <tr style="vertical-align:bottom">
+            <td style="padding:10px;width:180px;">
+            </td>
+
+            <td style="padding:10px; text-align:left;">
+                <p style="margin:0; font-size:14px; font-family:Arial, sans-serif;">
+                    <span>📞 </span><a href="tel:+610466693030" id="sig_phone" style="color: #14122b; text-decoration: none; font-size: 14px;">+61 0466 693 030</a><br>
+                    <span>✉️ </span><a href="mailto:aab@radfordretail.com"  id="sig_email" style="color: #14122b; text-decoration: none; font-size: 14px">aab@radfordretail.com</a><br>
+                    <span>🌐 </span><a href="http://www.radfordretail.com"  style="color: #14122b; text-decoration: none; font-size: 14px">www.radfordretail.com</a><br>
+                </p>
+            </td>
+        </tr>
+        <tr style="vertical-align:bottom">
+            <td style="padding:10px; padding-top: 0px; width:180px">
+                <img src="https://radfordretail.com/wp-content/uploads/2025/04/iso_cert.png" alt="ISO Certified" class="cert-img" style="width:120px; height:auto;"/>
+            </td>
+
+            <td style="padding:10px; text-align:left;">
+                <p style="margin:0; font-size:14px; font-family:Arial, sans-serif;">
+                    <strong>Need Support?</strong><br>
+                    <a href="https://radfordretail.zendesk.com/hc/en-au/requests/new" style="color: #14122b; text-decoration: none; font-size: 14px">Log a Ticket</a> | 
+                    <a href="https://radfordretail.zendesk.com/hc/en-au" style="color: #14122b; text-decoration: none; font-size: 14px">View Knowledgebase</a>
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+<!--
+    <table class="signature-table" style="width:600px; border:none; padding:0; font-family:Arial, Helvetica, sans-serif;">
+        <tr>
+            <td style="padding:10px;width:180px;">
+                <img src="https://radfordretail.com/wp-content/uploads/2025/04/brand_logo.png" alt="Radford" class="signature-img" style="width:150px; height:auto;"/>
+            </td>
+
+            <td style="padding:10px; text-align:left;">
+                <p style="margin:0; font-size:16px; ">
+                    <strong>Mehedi Hasan</strong><br>
+                    Programmer | Developer
+                </p>
+            </td>
+        </tr>
+        <tr style="vertical-align:bottom">
+            <td style="padding:10px;width:180px;">
+                <img src="https://radfordretail.com/wp-content/uploads/2025/04/iso_cert.png" alt="ISO Certified" class="cert-img" style="width:120px; height:auto;"/>
+            </td>
+
+            <td style="padding:10px; text-align:left;">
+                <p style="margin:0; font-size:14px; font-family:Arial, sans-serif;">
+                    <a href="http://www.radfordretail.com"  style="color: #14122b; text-decoration: none; font-size: 14px">🌐 www.radfordretail.com</a><br>
+                    <a href="tel:+61472739238" style="color: #14122b; text-decoration: none; font-size: 14px;">📞 +61 0472 739 238</a><br>
+                    <a href="mailto:mh@radfordretail.com"  style="color: #14122b; text-decoration: none; font-size: 14px">✉️ mh@radfordretail.com</a><br>
+                </p>
+            </td>
+        </tr>
+    </table>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <table class="signature-table" style="width:600px; border:none; padding:0; font-family:Arial, Helvetica, sans-serif;">
+        <tr>
+            <td style="padding:10px;width:180px;">
+                <img src="https://radfordretail.com/wp-content/uploads/2025/04/brand_logo.png" alt="Radford" class="signature-img" style="width:150px; height:auto;"/>
+            </td>
+
+            <td style="padding:10px; text-align:left;">
+                <p style="margin:0; font-size:16px; ">
+                    <strong>Adeel Abu Bakr</strong><br>
+                    Head Of Technology | Loss Prevention<br>
+                    <a href="tel:+610466693030" style="color: #14122b; text-decoration: none; font-size: 14px;">📞 +61 0466 693 030</a><br>
+                    <a href="http://www.radfordretail.com/"  style="color: #14122b; text-decoration: none; font-size: 14px">🌐 www.radfordretail.com</a> <br>
+                    <a href="mailto:aab@radfordretail.com"  style="color: #14122b; text-decoration: none; font-size: 14px">✉️ aab@radfordretail.com</a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding:10px;width:180px;">
+                <img src="https://radfordretail.com/wp-content/uploads/2025/04/iso_cert.png" alt="ISO Certified" class="cert-img" style="width:120px; height:auto;"/>
+            </td>
+
+            <td style="padding:10px; text-align:left;">
+                <p style="margin:0; font-size:14px; font-family:Arial, sans-serif;">
+                    <strong>Need Support?</strong><br>
+                    <a href="https://radfordretail.zendesk.com/hc/en-au/requests/new" style="color: #14122b; text-decoration: none; font-size: 14px">Log a Ticket</a> | 
+                    <a href="https://radfordretail.zendesk.com/hc/en-au" style="color: #14122b; text-decoration: none; font-size: 14px">View Knowledgebase</a>
+                </p>
+            </td>
+        </tr>
+    </table>
+
+-->
+    <script>
+        const form = document.getElementById("form1");
+        form.querySelectorAll("input").forEach(input => {
+            input.addEventListener("input", e => {
+            console.log("Wrking")
+            const preview = document.getElementById("sig_" + input.id);
+            if (preview) preview.innerText = e.target.value;
+            });
+        });
+
+        function copySignatue(){
+            const table = document.getElementById("signature-table")
+            const range = document.createRange();
+            range.selectNode(table)
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range)
+
+            try{
+                document.execCommand("copy")
+                alert("Signature is copied.")
+            }catch(err){
+                selection.removeAllRanges();
+            }
+        }
+
+    </script>
+</body>
+</html>
