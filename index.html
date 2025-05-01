@@ -109,6 +109,7 @@
           class="custom-input"
           placeholder="Your Phone Number"
         />
+        <input type="checkbox" id="excludePhone"> Don't Include 
         <br />
         <br />
         <button class="custom-button" type="button" onclick="copySignatue()">
@@ -153,13 +154,14 @@
 
         <td style="padding: 10px; text-align: left">
           <p style="margin: 0; font-size: 14px; font-family: Arial, sans-serif">
-            <span>📞 </span
+            <span class="exPhone">📞 </span
             ><a
               href="tel:+610466693030"
               id="sig_phone"
+              class="exPhone"
               style="color: #14122b; text-decoration: none; font-size: 14px"
               >+61 0466 693 030</a
-            ><br />
+            ><br class="exPhone" />
             <span>✉️ </span
             ><a
               href="mailto:aab@radfordretail.com"
@@ -294,6 +296,18 @@
             }
           }
         });
+        if(input.id === "excludePhone"){
+          input.addEventListener("click", (e) => {
+            const phoneElements = document.getElementsByClassName("exPhone");
+              for (let i = 0; i < phoneElements.length; i++) {
+                if(input.checked){
+                  phoneElements[i].style.display = "none";
+                }else{
+                  phoneElements[i].style.display = "inline";
+                }
+              }
+          })
+        }
       });
 
       function copySignatue() {
