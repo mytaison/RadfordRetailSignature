@@ -1,4 +1,8 @@
 @media screen and (max-width: 600px) {
+    header img{
+        width: 150px !important;
+        height: 34px !important;
+    }
     .signature-table {
         width: 100% !important;
     }
@@ -10,6 +14,18 @@
         width: 100px !important;
         height: auto !important;
     }
+    #form-wrapper{
+        width: 100%;
+    }
+    .custom-input {
+        width: stretch !important;
+    }
+    #emailSignaturePreview{
+        overflow-x: scroll !important;
+    }
+}
+header>div{
+    align-items: center;
 }
 .custom-header {
 font-weight: bold;

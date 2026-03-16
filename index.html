@@ -2,9 +2,10 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css?v=1.0">
     <link rel="icon" href="./favicon.ico">
     <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body>
@@ -14,61 +15,63 @@
         <h2>Signature Generator</h2>
       </div>
     </header>
-    <div style="font-family: Arial, Helvetica, sans-serif; padding: 1rem">
+    <div style="font-family: Arial, Helvetica, sans-serif; padding: 1rem" >
       <h4 class="custom-header">Your Signature Info</h4>
-      <form class="user-form" id="form1">
-        <label for="name" style="display: inline-block; width: 100px"
-          >Name:
-        </label>
-        <input
-          type="text"
-          id="name"
-          class="custom-input"
-          placeholder="Your Name"
-        />
-        <br />
-        <br />
-        <label for="position" style="display: inline-block; width: 100px"
-          >Designation:
-        </label>
-        <input
-          type="text"
-          id="position"
-          class="custom-input"
-          placeholder="Your Designation"
-        />
-        <br />
-        <br />
-        <label for="email" style="display: inline-block; width: 100px"
-          >Email:
-        </label>
-        <input
-          type="email"
-          id="email"
-          class="custom-input"
-          placeholder="Your Email"
-        />
-        <br />
-        <br />
-        <label for="phone" style="display: inline-block; width: 100px"
-          >Phone:
-        </label>
-        <input
-          type="phone"
-          id="phone"
-          class="custom-input"
-          placeholder="Your Phone Number"
-        />
-        <input type="checkbox" id="excludePhone"> Don't Include 
-        <br />
-        <br />
-        <input type="checkbox" id="excludeBanner" checked> Don't Include Banner
-        <br />
-        <br />
-        <button class="custom-button" type="button" onclick="copySignatue()">
-          Copy Signature
-        </button>
-      </form>
+      <div id="form-wrapper">
+        <form class="user-form" id="form1">
+          <label for="name" style="display: inline-block; width: 100px"
+            >Name:
+          </label>
+          <input
+            type="text"
+            id="name"
+            class="custom-input"
+            placeholder="Your Name"
+          />
+          <br />
+          <br />
+          <label for="position" style="display: inline-block; width: 100px"
+            >Designation:
+          </label>
+          <input
+            type="text"
+            id="position"
+            class="custom-input"
+            placeholder="Your Designation"
+          />
+          <br />
+          <br />
+          <label for="email" style="display: inline-block; width: 100px"
+            >Email:
+          </label>
+          <input
+            type="email"
+            id="email"
+            class="custom-input"
+            placeholder="Your Email"
+          />
+          <br />
+          <br />
+          <label for="phone" style="display: inline-block; width: 100px"
+            >Phone:
+          </label>
+          <input
+            type="phone"
+            id="phone"
+            class="custom-input"
+            placeholder="Your Phone Number"
+          />
+          <input type="checkbox" id="excludePhone"> Don't Include 
+          <br />
+          <br />
+          <input type="checkbox" id="excludeBanner" checked> Don't Include Banner
+          <br />
+          <br />
+          <button class="custom-button" type="button" onclick="copySignatue()">
+            Copy Signature
+          </button>
+        </form>
+      </div>
     </div>
 
     <br />
@@ -120,7 +123,7 @@
                 ><br class="exPhone" style="display: inline;" />
                 <span style="display: inline;">✉️ </span
                 ><a
-                  href="mailto:aab@radfordretail.com"
+                  href="mailto:yn@radfordretail.com"
                   id="sig_email"
                   style="color: #14122b; text-decoration: none; font-size: 14px; display: inline;"
                   >yn@radfordretail.com</a
