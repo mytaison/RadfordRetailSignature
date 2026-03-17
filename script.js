@@ -29,6 +29,12 @@ form.querySelectorAll("input").forEach((input) => {
         preview.setAttribute("href", "tel:" + e.target.value);
         storedPhone = e.target.value;
       }
+      if (input.id === "signoff") {
+        const signoffRow = document.getElementById("signoff-row");
+        if (signoffRow) {
+          signoffRow.style.display = e.target.value.trim() ? "" : "none";
+        }
+      }
     }
   });
   // also track changes on blur/events

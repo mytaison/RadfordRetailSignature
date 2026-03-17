@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles.css?v=1.0">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <header>
+      <div style="font-family: Arial, Helvetica, sans-serif; padding: 1rem; display: flex; gap: 1rem;">
+        <img src="https://cdn.prod.website-files.com/69570cfa93cce9dcfece4b5f/697aedd56bc06b1f8b8c778a_brand_logo.png" alt="Radford Retail" srcset="" height="50">
+        <h2>Signature Generator</h2>
+      </div>
+    </header>
+    <div style="font-family: Arial, Helvetica, sans-serif; padding: 1rem" >
+      <h4 class="custom-header">Your Signature Info</h4>
+      <div id="form-wrapper">
+        <form class="user-form" id="form1">
+          <label for="name" style="display: inline-block; width: 100px"
+            >Name:
+          </label>
+          <input
+            type="text"
+            id="name"
+            class="custom-input"
+            placeholder="Your Name"
+          />
+          <br />
+          <br />
+          <label for="position" style="display: inline-block; width: 100px"
+            >Designation:
+          </label>
+          <input
+            type="text"
+            id="position"
+            class="custom-input"
+            placeholder="Your Designation"
+          />
+          <br />
+          <br />
+          <label for="email" style="display: inline-block; width: 100px"
+            >Email:
+          </label>
+          <input
+            type="email"
+            id="email"
+            class="custom-input"
+            placeholder="Your Email"
+          />
+          <br />
+          <br />
+          <label for="phone" style="display: inline-block; width: 100px"
+            >Phone:
+          </label>
+          <input
+            type="phone"
+            id="phone"
+            class="custom-input"
+            placeholder="Your Phone Number"
+          />
+          <input type="checkbox" id="excludePhone"> Don't Include 
+          <br />
+          <br />
+          <label for="signoff" style="display: inline-block; width: 100px"
+            >Sign-off:
+          </label>
+          <input
+            type="text"
+            id="signoff"
+            class="custom-input"
+            placeholder="Thanks and best regards"
+          />
+          <br />
+          <br />
+          <input type="checkbox" id="excludeBanner" checked> Don't Include Banner
+          <br />
+          <br />
+          <button class="custom-button" type="button" onclick="copySignatue()">
+            Copy Signature
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+
+    <section id="emailSignaturePreview" style="padding: 1rem; font-family: Arial, Helvetica, sans-serif; padding: 1rem">
+      <h3>Signature Preview</h3>
+      <div style="border: #14122b; padding: auto; border-width: 0.1rem; border-style: dotted; width: fit-content;">
+        <table
+          id="signature-table"
+          border="0"
+          cellpadding="0"
+          cellspacing="0"
+          width="600"
+          style="font-family: Helvetica, Arial, sans-serif; border: none; max-width: 100%;"
+        >
+          <tr id="signoff-row">
+            <td colspan="2" style="padding: 10px; text-align: left; font-size: 14px;">
+              <span id="sig_signoff">Thanks and best regards</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; width: 150px; vertical-align: top;">
+              <img
+                id="brand-logo"
+                src=""
+                alt="Radford"
+                width="150"
+                height="auto"
+                style="width: 150px; height: auto; display: block; max-width: 100%;"
+              />
+            </td>
+
+            <td style="padding: 10px; text-align: left; vertical-align: top;">
+              <p style="margin: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; line-height: 1.4;">
+                <strong id="sig_name" style="font-weight: bold;">Your Name</strong><br />
+                <span id="sig_position" style="font-size: 14px;">Your Designation</span>
+              </p>
+            </td>
+          </tr>
+          <tr style="vertical-align: bottom;">
+            <td style="padding: 10px; width: 150px;"></td>
+
+            <td style="padding: 10px; text-align: left; vertical-align: bottom;">
+              <p style="margin: 0; font-size: 14px; font-family: Arial, sans-serif; line-height: 1.6;">
+                <span class="exPhone" style="display: inline;">📞 </span
+                ><a
+                  href="tel:+61123456789"
+                  id="sig_phone"
+                  class="exPhone"
+                  style="color: #14122b; text-decoration: none; font-size: 14px; display: inline;"
+                  >+61 123 456 789</a
+                ><br class="exPhone" style="display: inline;" />
+                <span style="display: inline;">✉️ </span
+                ><a
+                  href="mailto:yn@radfordretail.com"
+                  id="sig_email"
+                  style="color: #14122b; text-decoration: none; font-size: 14px; display: inline;"
+                  >yn@radfordretail.com</a
+                ><br style="display: block;" />
+                <span style="display: inline;">🌐 </span
+                ><a
+                  href="http://www.radfordretail.com"
+                  style="color: #14122b; text-decoration: none; font-size: 14px; display: inline;"
+                  >www.radfordretail.com</a
+                ><br style="display: block;" />
+              </p>
+            </td>
+          </tr>
+          <tr style="vertical-align: bottom;">
+            <td style="padding: 10px; padding-top: 0px; width: 150px; vertical-align: bottom;">
+              <img
+                id="iso-logo"
+                src=""
+                alt="ISO Certified"
+                width="120"
+                height="auto"
+                style="width: 120px; height: auto; display: block; max-width: 100%;"
+              />
+            </td>
+
+            <td style="padding: 10px; text-align: left; vertical-align: bottom;">
+              <p style="margin: 0; font-size: 14px; font-family: Arial, sans-serif; line-height: 1.6;">
+                <strong style="font-weight: bold;">Need Support?</strong><br />
+                <a
+                  id="ticket-link"
+                  href=""
+                  style="color: #14122b; text-decoration: none; font-size: 14px; display: inline;"
+                  >Log a Ticket</a
+                >
+                <span style="color: #14122b; font-size: 14px; display: inline;"> | </span>
+                <a
+                  id="kb-link"
+                  href=""
+                  style="color: #14122b; text-decoration: none; font-size: 14px; display: inline;"
+                  >View Knowledge Base</a
+                >
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    
+    <script src="./script.js"></script>
+  </body>
+</html>
