@@ -1,19 +1,24 @@
-const bannerSrc = "https://cdn.prod.website-files.com/69570cfa93cce9dcfece4b5f/697aecc73f8e0b2511aa1627_Radford-EuroShop2026-EmailBanner.png";
-const brandLogoSrc = "https://cdn.prod.website-files.com/69570cfa93cce9dcfece4b5f/697aedd56bc06b1f8b8c778a_brand_logo.png";
-const isoLogoSrc = "https://cdn.prod.website-files.com/69570cfa93cce9dcfece4b5f/697aedda4d25cda58b27faea_iso_cert.png";
+const bannerSrc =
+  "https://cdn.prod.website-files.com/69570cfa93cce9dcfece4b5f/6a1908662074d4edf36142be_email-signature-banner-NRF-APAC-2026-small.png";
+const brandLogoSrc =
+  "https://cdn.prod.website-files.com/69570cfa93cce9dcfece4b5f/697aedd56bc06b1f8b8c778a_brand_logo.png";
+const isoLogoSrc =
+  "https://cdn.prod.website-files.com/69570cfa93cce9dcfece4b5f/697aedda4d25cda58b27faea_iso_cert.png";
 const ticketUrl = "https://radfordretail.zendesk.com/hc/en-au/requests/new";
 const kbUrl = "https://knowledgebase.radfordretail.com/";
-let storedPhone = document.getElementById("phone") ? document.getElementById("phone").value : "";
+let storedPhone = document.getElementById("phone")
+  ? document.getElementById("phone").value
+  : "";
 const form = document.getElementById("form1");
 
-document.addEventListener('DOMContentLoaded', () => {
-  const brandImg = document.getElementById('brand-logo');
+document.addEventListener("DOMContentLoaded", () => {
+  const brandImg = document.getElementById("brand-logo");
   if (brandImg) brandImg.src = brandLogoSrc;
-  const isoImg = document.getElementById('iso-logo');
+  const isoImg = document.getElementById("iso-logo");
   if (isoImg) isoImg.src = isoLogoSrc;
-  const ticketLink = document.getElementById('ticket-link');
+  const ticketLink = document.getElementById("ticket-link");
   if (ticketLink) ticketLink.href = ticketUrl;
-  const kbLink = document.getElementById('kb-link');
+  const kbLink = document.getElementById("kb-link");
   if (kbLink) kbLink.href = kbUrl;
 });
 
@@ -43,33 +48,33 @@ form.querySelectorAll("input").forEach((input) => {
       storedPhone = e.target.value;
     });
   }
-  if(input.id === "excludePhone"){
+  if (input.id === "excludePhone") {
     input.addEventListener("click", (e) => {
       const phoneElements = document.getElementsByClassName("exPhone");
-        for (let i = 0; i < phoneElements.length; i++) {
-          if(input.checked){
-            phoneElements[i].style.display = "none";
-          }else{
-            phoneElements[i].style.display = "inline";
-          }
+      for (let i = 0; i < phoneElements.length; i++) {
+        if (input.checked) {
+          phoneElements[i].style.display = "none";
+        } else {
+          phoneElements[i].style.display = "inline";
         }
-    })
+      }
+    });
   }
-  if(input.id === "excludeBanner"){
+  if (input.id === "excludeBanner") {
     input.addEventListener("click", (e) => {
       const table = document.getElementById("signature-table");
-      const bannerRow = table.querySelector('.exBanner');
-      
-      if(input.checked){
+      const bannerRow = table.querySelector(".exBanner");
+
+      if (input.checked) {
         // Remove banner row if it exists
-        if(bannerRow){
+        if (bannerRow) {
           bannerRow.remove();
         }
-      }else{
+      } else {
         // Add banner row if it doesn't exist
-        if(!bannerRow){
-          const newRow = document.createElement('tr');
-          newRow.className = 'exBanner';
+        if (!bannerRow) {
+          const newRow = document.createElement("tr");
+          newRow.className = "exBanner";
           newRow.innerHTML = `
             <td colspan="2" style="padding: 0;">
               <a href="http://www.radfordretail.com" style="display: block;">
@@ -86,7 +91,7 @@ form.querySelectorAll("input").forEach((input) => {
           table.appendChild(newRow);
         }
       }
-    })
+    });
   }
 });
 
