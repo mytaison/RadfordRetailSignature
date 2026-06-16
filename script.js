@@ -1,5 +1,5 @@
 const bannerSrc =
-  "https://cdn.prod.website-files.com/69570cfa93cce9dcfece4b5f/6a1908662074d4edf36142be_email-signature-banner-NRF-APAC-2026-small.png";
+  "https://cdn.prod.website-files.com/69570cfa93cce9dcfece4b5f/6a30f31683154594aa0664f9_MetCashFoodExpo26.png";
 const brandLogoSrc =
   "https://cdn.prod.website-files.com/69570cfa93cce9dcfece4b5f/697aedd56bc06b1f8b8c778a_brand_logo.png";
 const isoLogoSrc =
