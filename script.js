@@ -1,5 +1,5 @@
 const bannerSrc =
-  "https://cdn.prod.website-files.com/69570cfa93cce9dcfece4b5f/6a30f31683154594aa0664f9_MetCashFoodExpo26.png";
+  "https://cdn.prod.website-files.com/69570cfa93cce9dcfece4b5f/6a31fd7d51ba24eaad0418fc_MetCashFoodExpo26EmailBannerSmall.png";
 const brandLogoSrc =
   "https://cdn.prod.website-files.com/69570cfa93cce9dcfece4b5f/697aedd56bc06b1f8b8c778a_brand_logo.png";
 const isoLogoSrc =
@@ -80,7 +80,7 @@ form.querySelectorAll("input").forEach((input) => {
               <a href="http://www.radfordretail.com" style="display: block;">
                 <img
                   src="${bannerSrc}"
-                  alt="Radford EuroShop2026 Register Now!"
+                  alt="Radford Event Register Now!"
                   width="600"
                   height="auto"
                   style="width: 100%; height: auto; display: block; max-width: 600px;"
